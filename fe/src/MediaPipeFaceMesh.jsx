@@ -65,7 +65,10 @@ const MediaPipeFaceMesh = () => {
       if (video.readyState >= 2) {
         await faceMesh.send({ image: video });
       }
-      requestAnimationFrame(processFrame);
+
+      setTimeout(() => {
+        requestAnimationFrame(processFrame);
+      }, 33);
     };
 
     navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
