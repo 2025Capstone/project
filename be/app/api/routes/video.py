@@ -34,8 +34,7 @@ def upload_video(
         video_index = video_count + 1
 
         # 3. S3에 업로드하여 영상 링크 획득
-        s3_link = upload_video_to_s3(file.file, file.filename)
-
+        s3_link, unique_folder = upload_video_to_s3(file.file, file.filename)  # ✅ 튜플을 개별 변수로 할당
         # 4. Video 레코드 생성
         new_video = Video(
             lecture_id=video_data.lecture_id,
