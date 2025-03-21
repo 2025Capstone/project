@@ -5,3 +5,8 @@ pydantic
 psycopg2
 python-dotenv
 pymysql
+boto3
+python-multipart
+moviepy
+alembic
+uuid
