@@ -1,0 +1,51 @@
+fastapi_project/
+│── app/
+│   ├── api/
+│   │   ├── routes/
+│   │   │   ├── user.py
+│   │   │   ├── auth.py
+│   │   │   ├── video.py          # ✅ HLS 비디오 스트리밍 API (S3 연동)
+│   │   │   ├── websocket.py      # ✅ 웹소켓 API (웹캠 랜드마크 데이터 수신)
+│   │   │   ├── __init__.py
+│   │   ├── dependencies/
+│   │   │   ├── auth.py
+│   │   │   ├── db.py
+│   │   │   ├── __init__.py
+│   ├── core/
+│   │   ├── config.py
+│   │   ├── security.py
+│   │   ├── __init__.py
+│   ├── models/
+│   │   ├── user.py
+│   │   ├── video.py         # ✅ 비디오 메타데이터 저장 모델
+│   │   ├── drowsiness.py    # ✅ 졸음 감지 결과 저장 모델
+│   │   ├── __init__.py
+│   ├── schemas/
+│   │   ├── user.py
+│   │   ├── video.py         # ✅ 비디오 요청/응답 스키마
+│   │   ├── drowsiness.py    # ✅ 졸음 감지 요청/응답 스키마
+│   │   ├── __init__.py
+│   ├── services/
+│   │   ├── user_service.py
+│   │   ├── video_service.py       # ✅ AWS S3 업로드 및 URL 반환 로직
+│   │   ├── drowsiness_service.py  # ✅ 졸음 감지 결과 저장 로직
+│   │   ├── __init__.py
+│   ├── db/
+│   │   ├── base.py
+│   │   ├── session.py
+│   │   ├── __init__.py
+│   ├── ml/
+│   │   ├── model.py          # PyTorch 졸음 감지 모델
+│   │   ├── predictor.py      # 모델 추론 로직
+│   │   ├── __init__.py
+│   ├── main.py
+│── tests/
+│   ├── test_user.py
+│   ├── test_websocket.py
+│   ├── test_video.py
+│── .env  # ✅ AWS S3 인증 정보 저장
+│── requirements.txt
+│── alembic/
+│── Dockerfile
+│── README.md
+
