@@ -6,6 +6,7 @@ import Hls from "react-hls-player";
 
 
 import MediaPipeFaceMesh from './MediaPipeFaceMesh';
+import UploadVideo from "./UploadVideo.jsx";
 
 function App() {
   return (
@@ -17,7 +18,11 @@ function App() {
             controls={true}
             width="100%"
             height="auto"
-        />    </div>
+        />
+        <UploadVideo></UploadVideo>
+    </div>
+
+
   );
 }
 
